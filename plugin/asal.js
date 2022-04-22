@@ -3,24 +3,24 @@ let handler = async (m, { conn, text }) => {
   let ext= `
 ╭═════════════════
 ║╭──❉ *BIODATA OWNER* ❉───
-║│➸ *Nama* : rozi ( nama samaran ) 
-║│➸ *Umur* : 15
-║│➸ *Kelas* :  9 SMP
-║│➸ *Status* : butuh ayng AWOKAWOK
+║│➸ *Nama* : NoelDaniel
+║│➸ *Umur* : 14
+║│➸ *Kelas* :  Private
+║│➸ *Status* : Private
 ║╰───────────────
 ╰════════════════
 ╭════════════════
 ║╭──❉ *ASAL KOTA* ❉───
-║│➸ *DAERAH* : *_KALIMANTAN BARAT =}} KUBURAYA_*
-║│➸ *ASAL KOTA* : *_PONTIANAK_*
-║│➸ *ALAMAT RUMAH* : *[PRIVASI]*
-║│➸ *Gmail* : roziganteng559@gmail.com
+║│➸ *NEGARA* : *_MALAYSIA_*
+║│➸ *NEGERI* : *_SABAH_*
+║│➸ *DAERAH* : *_PENAMPANG_*
+║│➸ *Gmail* : arybotzganteng@gmail.com
 ║╰────────────────
 ╰═════════════════
 _Oke udah itu aja terimakasih_
 
 `.trim()
-conn.send3ButtonLoc(m.chat, await (await fetch(fla + 'ROZI')).buffer(), ext, 'zifabotz', 'Nomor Owner', '.owner', 'Donasi', '.donasi', 'Sewa Bot', '.sewazifa', m)
+conn.send3ButtonLoc(m.chat, await (await fetch(fla + 'ARY')).buffer(), ext, 'AryBotz', 'Nomor Owner', '.owner', 'Donasi', '.donasi', 'Sewa Bot', '.sewazifa', m)
 
 }
 handler.help = ['asal', 'kota']
@@ -37,4 +37,4 @@ handler.botAdmin = false
 
 handler.fail = null
 
-module.exports = handler
+module.exports =
