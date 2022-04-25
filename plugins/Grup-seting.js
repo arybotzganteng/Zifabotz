@@ -2,60 +2,60 @@ let handler = async (m, { conn }) =>
 conn.relayWAMessage(conn.prepareMessageFromContent(m.chat, {
                     "listMessage":  {
                         "title": `Hai Kak ${conn.getName(m.sender)}\n*setelan grub*`,
-                        "description": "\n\n*@zifabotz*",
-                        "footerText": "jika ada bug atau erorr Jangan tanya saya,karna saya juga gak tau.",
-                        "buttonText": "*SETELAN GRUB*",
+                        "description": "\n\n*©ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×*",
+                        "footerText": "𝙹𝙸𝙺𝙰 𝙰𝙳𝙰 𝙱𝚄𝙶 𝙰𝚃𝙰𝚄 𝙴𝚁𝚁𝙾𝚁 𝚂𝙸𝙻𝙰𝙷𝙺𝙰𝙽 𝙻𝙰𝙿𝙾𝚁 𝙺𝙴 𝙾𝚆𝙽𝙴𝚁 𝙱𝙾𝚃",
+                        "buttonText": "*𝕮𝕷𝕴𝕮𝕶 𝕳𝕰𝕽𝕰*",
                         "listType": "SINGLE_SELECT",
                         "sections": [
                             {
                                 "rows": [
                                     {
-                                    	"title": "WELCOME👋",
-                                        "description": "mengaktifkan fitur welcome",
+                                    	"title": "➵͜͡✪ 𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 𝚆𝙴𝙻𝙲𝙾𝙼𝙴👋",
+                                        "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".on welcome"
                                         },{
-                                    	"title": "OFF WELCOME👋",
-                                        "description": "menonaktifkan fitur welcome",
+                                    	"title": "➵͜͡✪ 𝙼𝙰𝚃𝙸𝙺𝙰𝙽 𝚆𝙴𝙻𝙲𝙾𝙼𝙴👋",
+                                        "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".off welcome"
                                         },{
-                                    	"title": "ANTI DELETE⛔",
-                                        "description": "mengaktifkan fitur antidelete",
+                                    	"title": "➵͜͡✪ 𝙾𝙽 𝙰𝙽𝚃𝙸𝙳𝙴𝙻𝙴𝚃𝙴",
+                                        "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".on delete"
                                         },{
-                                        "title": "OFF ANTI DELETE⛔",
-                                        "description": "menonaktifkan fitur antidelete",
+                                        "title": "➵͜͡✪ 𝙾𝙵𝙵 𝙰𝙽𝚃𝙸𝙳𝙴𝙻𝙴𝚃𝙴",
+                                        "description:" "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".off delete"
                                         },{
-                                        "title": "VIEWONCE💾",
-                                        "description": "mengaktifkan fitur viewonce",
+                                        "title": "➵͜͡✪ 𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 𝚅𝙸𝙴𝚆𝙾𝙽𝙲𝙴",
+                                        "description:" "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".on viewonce"
                                         },{
-                                        "title": "OFF VIEWONCE💾",
-                                        "description": "menonaktifkan fitur viewonce",
+                                        "title": "➵͜͡✪ 𝙼𝙰𝚃𝙸𝙺𝙰𝙽 𝚅𝙸𝙴𝚆𝙾𝙽𝙲𝙴",
+                                        "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".off viewonce"             
                                         },{
-                                        "title": "DETECT⁉",
-                                        "description": "mengaktifkan fitur detect",
+                                        "title": "➵͜͡✪ 𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 𝙳𝙴𝚃𝙴𝙲𝙺",
+                                        "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".on detect"
                                         },{
-                                        "title": "OFF DETECT⁉",
-                                        "description": "menonaktifkan fitur detect",
+                                     .   "title": "➵͜͡✪ 𝙼𝙰𝚃𝙸𝙺𝙰𝙽 𝙳𝙴𝚃𝙴𝙲𝙺",
+                                        "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".off detect"
                                         },{
-                                    	"title": "ANTIBADWORD🚫",
-                                        "description": "mengaktifkan fitur antibadword",
+                                    	"title": "ANTIBADWORD",
+                                        "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".on antibadword"
                                         },{
-                                    	"title": "OFF ANTIBADWORD🚫",
-                                        "description": "menonaktifkan fitur antibadword",
+                                    	"title": "➵͜͡✪ 𝙼𝙰𝚃𝙸𝙺𝙰𝙽 𝙰𝙽𝚃𝙸𝙱𝙰𝙳𝚆𝙾𝚁𝙳",
+                                        "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".off antibadword"
                                         },{
-                                    	"title": "ANTILINK❗",
-                                        "description": "mengaktifkan fitur antilink",
+                                    	"title": "➵͜͡✪ 𝙰𝙺𝚃𝙸𝙵𝙺𝙰𝙽 𝙰𝙽𝚃𝙸𝙻𝙸𝙽𝙺",
+                                        "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".on antilink"
                                         },{
-                                    	"title": "OFF ANTILINK❗",
-                                        "description": "menonaktifkan fitur antilink",
+                                    	"title": "➵͜͡✪ 𝙼𝙰𝚃𝙸𝙺𝙰𝙽 𝙰𝙽𝚃𝙸𝙻𝙸𝙽𝙺",
+                                        "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
                                         "rowId": ".off antilink"
                                     }
                                 ]
