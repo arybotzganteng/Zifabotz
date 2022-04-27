@@ -1,4 +1,4 @@
-let levelIing = require('../lib/levelling')
+let levelling = require('../lib/levelling')
 let { MessageType } = require('@adiwajshing/baileys')
 let fs = require('fs')
 let path = require('path')
@@ -9,19 +9,19 @@ const groups = chats.filter(v => v.jid.endsWith('g.us'))
 const defaultMenu = {
   before: `
 ╭═══════════════════════⬣
-║╭──❉ {    } ❉──────
+║╭──❉ {  𝙰𝚁𝚈𝙱𝙾𝚃𝚉  } ❉──────
 ║│➸Hai, %name!👋
 ║│➸💰Tersisa *%limit Limit*
 ║│➸Role *%role*
 ║│➸🎚️Level *%level (%exp / %maxexp)*
 ║│➸🎚️[%xp4levelup]
 ║│➸%totalexp XP secara Total
-║╭──❉ 〔⳹ ❋ཻུ۪۪⸙TANGGAL⳹ ❋ཻུ۪۪〕 ❉──────
+║╭──❉ 〔𝚃𝙰𝙽𝙶𝙶𝙰𝙻〕 ❉──────
 ║│➸Hari: *%week %weton*
 ║│➸Tanggal: *%date*
 ║│➸WaktuIslam:*%dateIslamic*
 ║│➸Waktu: *%time*
-║╭──❉ 〔⳹ ❋ཻུ۪۪⸙TIME⳹ ❋ཻུ۪۪〕 ❉──────
+║╭──❉ 〔𝚃𝙸𝙼𝙴〕 ❉──────
 ║│➸Uptime: *%uptime (%muptime)*
 ║│➸Database: %rtotalreg dari %totalreg
 ║│➸Memory Used : 
@@ -32,7 +32,7 @@ const defaultMenu = {
   body: '║│➸%cmd %islimit %isPremium',
   footer: '*╰───❉*\n',
   after: `
-  ⬣━〔𝙲𝚁𝙴𝙰𝚃𝙴𝙳 𝙱𝚈 𝙰𝚁𝚈〕━⬣
+  ⬣━〔𝚙𝚘𝚠𝚎𝚛𝚎𝚍 𝙱𝚈 𝙰𝚛𝚈〕━⬣
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
@@ -222,213 +222,211 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                     "listMessage":  {
                         "title": `*${ucapan()}, ${name}*`.trim(),
                         "description": `╭═══════════════════════
-║╭──❉ 〔 AryBotz 〕 ❉────── 
-║│➸⏲️ 𝚁𝚄𝙽𝚃𝙸𝙼𝙴 ${uptime}
-║│➸ 🔋𝙱𝙰𝚃𝚃𝙴𝚁𝚈 𝙱𝙾𝚃 ! ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
-║│➸ *Wa.me/60147751029*
+║╭──❉ 〔 𝙰𝚁𝚈𝙱𝙾𝚃𝚉 〕 ❉────── 
+║│➸⏲️Aktif selama ${uptime}
+║│➸🔋Baterai ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 pengisian' : ''}` : 'tidak diketahui'}
+║│➸ Created By 𝐀𝐑𝐘
 ║│➸ *${conn.blocklist.length}* Terblock
 ║│➸ *${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}* Chat Terbanned
 ║│➸ *${Object.entries(global.db.data.users).filter(user => user[1].banned).length}* Pengguna Terbanned
 ╰─────────❉
 _____••••••••• 
-⬣━〔Powered By Ary〕━⬣
+⬣━〔𝙿𝚘𝚠𝚎𝚛𝚎𝙳 𝙱𝚈 𝙰𝚛𝚈〕━⬣
 ▌│█║▌║▌║║▌║▌║█│▌ `.trim(),
-                        "footerText": " 📌 𝗣𝗶𝗻𝗻𝗲𝗱 : *𝙺𝙰𝙻𝙾 𝙰𝙳𝙰 𝙼𝙴𝙽𝚄 𝚈𝙰𝙽𝙶 𝙴𝚁𝚁𝙾𝚁 𝙲𝙷𝙰𝚃 𝙾𝚆𝙽𝙴𝚁 𝙰𝙹𝙰*
-WA.ME/60147751029
-WA.ME/601155090795",
-                        "buttonText": "Click Here",
+                        "footerText": " *📮 Note Tolong Jangan Dispam Ya Biar Ga Delay*",
+                        "buttonText": "𝙲𝙻𝙸𝙲𝙺 𝙷𝙴𝚁𝙴",
                         "listType": "SINGLE_SELECT",
                         "sections": [
                             {
                                 "rows": [{
-                                    "title":  "𝙳𝙾𝙽𝙰𝚂𝙸",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "title":  "➵͜͡✪ 𝙳𝙾𝙽𝙰𝚂𝙸",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".donasi"
                                 }, {
-                                    "title":      "𝙳𝙰𝙵𝚃𝙰𝚁",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
-                                    "rowId": ".daftar Ary.14"
+                                    "title":      "➵͜͡✪ 𝙳𝙰𝙵𝚃𝙰𝚁",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
+                                    "rowId": ".daftar"
                                 }, {
- "title":      "𝚂𝙴𝚃𝙴𝙻𝙰𝙽 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+ "title":      "➵͜͡✪ 𝚂𝙴𝚃𝙴𝙻𝙰𝙽 𝙶𝚁𝚄𝙱",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".setelangrub"
                                 }, {
-"title":      "𝚂𝚃𝙾𝚁𝙴 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+"title":      "➵͜͡✪ 𝚂𝚃𝙾𝚁𝙴 𝚉𝙸𝙵𝙰",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".iklan"
                                 }, {
-  "title":  "𝙹𝙰𝙳𝙸bot 𝚂𝙴𝙼𝙴𝙽𝚃𝙰𝚁𝙰",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+  "title":  "➵͜͡✪ 𝙹𝙰𝙳𝙸𝙱𝙾𝚃 𝚂𝙴𝙼𝙴𝙽𝚃𝙰𝚁𝙰",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".jadibot"
                                 }, {
-  "title":  "𝙶𝚁𝙾𝚄𝙿 𝙱𝙾𝚃",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+  "title":  "➵͜͡✪ 𝙶𝚁𝚄𝙱 𝙱𝙾𝚃",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".gcbot"
                                 }, {
-  "title":  "𝙱𝙸𝙾𝙳𝙰𝚃𝙰 𝙾𝚆𝙽𝙴𝚁 < *𝙴𝚁𝚁𝙾𝚁* >",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+  "title":  "➵͜͡✪ 𝙱𝙸𝙾𝙳𝙰𝚃𝙰 𝙾𝚆𝙽𝙴𝚁",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".infoowner"
                                 }, {
-                                    "title": "➵͜͡✪ 𝚂𝙴𝚆𝙰𝙱𝙾𝚃",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "title": "➵͜͡✪ 𝚂𝙴𝚆𝙰 𝙱𝙾𝚃",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".sewa"
                                 }],
                                 "title": "⟣─────────❲ Tentang Bot dan lainnya ❳──────────⟢"
                             }, {
                                 "rows": [{
-                                    "title": `➵͜͡✪ 𝚂𝙴𝙼𝚄𝙰 𝙿𝙴𝚁𝙸𝙽𝚃𝙰𝙷`,
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "title": `𝙰𝙻𝙻 𝙼𝙴𝙽𝚄 𝙱𝙾𝚃`,
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? all",
                                 }, { 
                                     "title": "➵͜͡✪ 𝙸𝚂𝙻𝙰𝙼 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? quran"
                                 }, {
  "title": "➵͜͡✪ 𝙳𝙾𝙰 𝙷𝙰𝚁𝙸𝙰𝙽",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".doaharian"
                                 }, {
-                                	"title": "➵͜͡✪ 𝙲𝙷𝚁𝙸𝚂𝚃𝙸𝙰𝙽 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                	"title": "➵͜͡✪ 𝙺𝚁𝙸𝚂𝚃𝙴𝙽 𝙼𝙴𝙽𝚄",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? cristian"
                                 }, {
                                     "title": "➵͜͡✪ 𝙴𝙳𝚄𝙺𝙰𝚂𝙸 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? edukasi"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙽𝙴𝚆𝚂 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? News"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙶𝙰𝙼𝙴 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? game"
                                 }, { 
                                     "title": "➵͜͡✪ 𝚁𝙿𝙶 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? rpg"
                                 }, { 
-                                    "title": "➵͜͡✪ 𝚇𝙿 & 𝙻𝙸𝙼𝙸𝚃 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "title": "➵͜͡✪ 𝚇𝙿 & 𝙻𝙴𝚅𝙴𝙻 𝙼𝙴𝙽𝚄",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? xp"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙽𝚂𝙵𝚆 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? nsfw"
                                 }, { 
-                                    "title": "➵͜͡✪ 𝙸𝙼𝙰𝙶𝙴 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "title": "➵͜͡✪ 𝙸𝙼𝙰𝙶𝙴 𝚁𝙰𝙽𝙳𝙾𝙼",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? image"
                                 }, { 
-                                    "title": "➵͜͡✪ 𝚂𝚃𝙸𝙲𝙺𝙴𝚁 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "title": "➵͜͡✪ 𝚂𝚃𝙸𝙺𝙴𝚁 𝙼𝙴𝙽𝚄",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? stiker"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙰𝙹𝙰𝙸𝙱 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? kerangajaib"
                                 }, { 
                                     "title": "➵͜͡✪ 𝚀𝚄𝙾𝚃𝙴𝚂 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? quotes"
                                 }, { 
-                                    "title": "➵͜͡✪ 𝙰𝙳𝙼𝙸𝙽 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "title": "➵͜͡✪ 𝙰𝙳𝙼𝙸𝙽 𝙶𝚁𝚄𝙱 𝙼𝙴𝙽𝚄",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? admin"
                                 }, { 
-                                    "title": "➵͜͡✪ 𝙶𝚁𝙾𝚄𝙿 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "title": "➵͜͡✪ 𝙶𝚁𝚄𝙱 𝙼𝙴𝙽𝚄",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? grup"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙿𝚁𝙴𝙼𝙸𝚄𝙼 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? premium"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙸𝙽𝚃𝙴𝚁𝙽𝙴𝚃 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? internet"
                                 }, { 
-                                    "title": "➵͜͡✪ 𝙰𝙽𝙾𝙽𝚈𝙼𝙾𝚄𝚂 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "title": "➵͜͡✪ 𝙰𝙽𝙾𝙽𝚈𝙼𝙾𝚄𝚂 𝙲𝙷𝙰𝚃",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? anonymous"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙽𝚄𝙻𝙸𝚂 & 𝙻𝙾𝙶𝙾 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? nulis"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? downloader"
                                 }, { 
                                     "title": "➵͜͡✪ 𝚃𝙾𝙾𝙻𝚂 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? tools"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙵𝚄𝙽 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? fun"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙳𝙰𝚃𝙰𝙱𝙰𝚂𝙴 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? database"
                                 }, { 
                                     "title": "➵͜͡✪ 𝚅𝙾𝚃𝙴 & 𝙰𝙱𝚂𝙴𝙽 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? vote"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙰𝚄𝙳𝙸𝙾 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? audio"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙹𝙰𝙳𝙸𝙱𝙾𝚃 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? jadibot"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙰𝙽𝙸𝙼𝙴 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? anime"
                                 }, { 
-                                    "title": "➵͜͡✪ 𝙸𝙽𝙵𝙾",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "title": "𝙸𝙽𝙵𝙾 𝙱𝙾𝚃",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? info"
                                 }, { 
-"title": "➵͜͡✪ 𝚁𝙴𝚂𝙿𝙾𝙽 𝙱𝙾𝚃",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+"title": "𝚁𝚄𝙽𝚃𝙸𝙼𝙴 𝙱𝙾𝚃",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".runtime"
                                 }, { 
                                     "title": "➵͜͡✪ 𝚃𝙰𝙶𝙼𝙴",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".tagme"
                                 }, { 
 "title": "➵͜͡✪ 𝚆𝙰𝙸𝙵𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".waifu"
                                 }, { 
 "title": "➵͜͡✪ 𝙿𝚁𝙾𝙵𝙸𝙻𝙴",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".profile"
                                 }, { 
                                     "title": "➵͜͡✪ 𝙾𝚆𝙽𝙴𝚁 𝙼𝙴𝙽𝚄",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".? owner"
                                 }],
                                 "title": "⟣──────────────❲  All-Menu  ❳──────────────⟢"
                             }, {
                                 "rows": [{
                                     "title": "➵͜͡✪ 𝙾𝚆𝙽𝙴𝚁 𝙱𝙾𝚃",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".owner"
                                 }, {
                                     "title": "➵͜͡✪ 𝚂𝚃𝙰𝚃𝚄𝚂 𝙱𝙾𝚃",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".botstatus"
                                 }, {
                                     "title": "➵͜͡✪ 𝚁𝚄𝙻𝙴𝚂 𝙱𝙾𝚃",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".rules"
                                 }, {
-                                    "title": "➵͜͡✪ 𝚃𝚀𝚃𝙸 𝙰𝙻𝙻",
-                                    "description": "➵͜͡✪ ᴹᴿ𝙄𝙩𝙨𝐀𝐑𝐘 ×፝֟͜×",
+                                    "title": "➵͜͡✪ 𝚃𝚀𝚃𝙾 𝙰𝙻𝙻",
+                                    "description": "➵͜͡✪ 𝙄𝙩𝙨 ᴹʸ𝐀𝐑𝐘 ×፝֟͜×'",
                                     "rowId": ".tqto"
                                 }],
                                 "title": "⟣──────────────❲ Penutup ❳───────────────⟢"
